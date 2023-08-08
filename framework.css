@@ -1,0 +1,672 @@
+/* JUMP TO: FRAMEWORK
+-------------------------------------------------------------------------------------------------------------*/
+
+:root {
+
+  /* DP- Typography */
+  --dp-font-xs: clamp(1.19rem, calc(1.16rem + 0.13vw), 1.25rem);
+  --dp-font-s: clamp(1.43rem, calc(1.37rem + 0.28vw), 1.56rem);
+  --dp-font-body: clamp(1.71rem, calc(1.61rem + 0.50vw), 1.95rem);
+  --dp-font-h6: clamp(2.05rem, calc(1.89rem + 0.80vw), 2.44rem);
+  --dp-font-h5: clamp(2.46rem, calc(2.22rem + 1.21vw), 3.05rem);
+  --dp-font-h4: clamp(2.96rem, calc(2.60rem + 1.76vw), 3.82rem);
+  --dp-font-h3: clamp(3.55rem, calc(3.04rem + 2.51vw), 4.77rem);
+  --dp-font-h2: clamp(4.26rem, calc(3.56rem + 3.50vw), 5.96rem);
+  --dp-font-h1: clamp(5.11rem, calc(4.14rem + 4.81vw), 7.45rem);
+
+  /* DP- Spaces & Gap */
+  --dp-space-3xs: clamp(0.31rem, calc(0.31rem + 0.00vw), 0.31rem);
+  --dp-space-2xs: clamp(0.63rem, calc(0.63rem + 0.00vw), 0.63rem);
+  --dp-space-xs: clamp(0.88rem, calc(0.85rem + 0.13vw), 0.94rem);
+  --dp-space-s: clamp(1.19rem, calc(1.16rem + 0.13vw), 1.25rem);
+  --dp-space-m: clamp(1.81rem, calc(1.79rem + 0.13vw), 1.88rem);
+  --dp-space-l: clamp(2.38rem, calc(2.32rem + 0.26vw), 2.50rem);
+  --dp-space-xl: clamp(3.56rem, calc(3.49rem + 0.38vw), 3.75rem);
+  --dp-space-2xl: clamp(4.75rem, calc(4.65rem + 0.51vw), 5.00rem);
+  --dp-space-3xl: clamp(7.13rem, calc(6.97rem + 0.77vw), 7.50rem);
+  --dp-space-4xl: clamp(9.50rem, calc(9.29rem + 1.03vw), 10.00rem);
+  --dp-space-5xl: clamp(11.88rem, calc(11.62rem + 1.28vw), 12.50rem);
+  --dp-space-6xl: clamp(14.25rem, calc(13.94rem + 1.54vw), 15.00rem);
+
+  /* ACTION COLOR */
+  /* Bricks Colors (Yellow & Black) */
+  /* --dp-action-h: 46;
+  --dp-action-s: 100%;
+  --dp-action-l: 65%;
+  --dp-action-hsl: var(--dp-action-h) var(--dp-action-s) var(--dp-action-l);
+  --dp-action: hsl(var(--dp-action-hsl));
+  --dp-action-hover: hsl(var(--dp-action-h) var(--dp-action-s) 45%);
+  --dp-action-text: var(--dp-base);
+  --dp-action-hover-text: hsl(var(--dp-action-h) var(--dp-action-s) 5%);
+  --dp-action-shade: var(--dp-base);
+  --dp-action-shade-text: hsl(var(--dp-action-h) var(--dp-action-s) 5%);   */
+
+  /* Webflow Color (Blue & White) */
+  --dp-action-h: 235;
+  --dp-action-s: 100%;
+  --dp-action-l: 65%;
+  --dp-action-hsl: var(--dp-action-h) var(--dp-action-s) var(--dp-action-l);
+  --dp-action: hsl(var(--dp-action-hsl));
+  --dp-action-text: var(--dp-white);
+  --dp-action-hover: hsl(var(--dp-action-h) var(--dp-action-s) 85%);
+  --dp-action-hover-text: hsl(var(--dp-action-h) var(--dp-action-s) 55%);
+  --dp-action-shade: hsl(var(--dp-action-h) var(--dp-action-s) 95% );
+  --dp-action-shade-text: hsl(var(--dp-action-h) var(--dp-action-s) 55% );
+
+  /* PRIMARY COLOR */
+  --dp-primary-h: 210;
+  --dp-primary-s: 46%;
+  --dp-primary-l: 27%;
+  --dp-primary-hsl: var(--dp-primary-h) var(--dp-primary-s) var(--dp-primary-l);
+  --dp-primary: hsl(var(--dp-primary-hsl));
+  --dp-primary-text: var(--dp-white);
+  --dp-primary-hover: hsl(var(--dp-primary-h) var(--dp-primary-s) 85%);
+  --dp-primary-hover-text: hsl(var(--dp-primary-h) var(--dp-primary-s) 25%);
+  --dp-primary-shade: hsl(var(--dp-primary-h) var(--dp-primary-s) 95%);
+  --dp-primary-shade-text: hsl(var(--dp-primary-h) var(--dp-primary-s) 25%);
+  --dp-primary-overlay: hsl(var(--dp-primary-h) var(--dp-primary-s) var(--dp-primary-l) / 0.8);
+
+  /* BASE COLOR */
+  --dp-base-h: 0;
+  --dp-base-s: 0%;
+  --dp-base-l: 13%;
+  --dp-base-hsl: var(--dp-base-h) var(--dp-base-s) var(--dp-base-l);
+  --dp-base: hsl(var(--dp-base-hsl));
+  --dp-base-text: var(--dp-white);
+  --dp-base-hover: hsl(var(--dp-base-h) var(--dp-base-s) 85%);
+  --dp-base-hover-text: hsl(var(--dp-base-h) var(--dp-base-s) 25%);
+  --dp-base-shade: hsl(var(--dp-base-h) var(--dp-base-s) 95%);
+  --dp-base-shade-text: hsl(var(--dp-base-h) var(--dp-base-s) 25%);
+  --dp-base-overlay: hsl(var(--dp-base-h) var(--dp-base-s) var(--dp-base-l) / 0.8);
+
+  /* WHITE COLOR */
+  --dp-white: #FFF;
+  --dp-white-trans: hsla(0, 0%, 90%);
+  --dp-white-text: var(--dp-base);
+  --dp-white-hover: var(--dp-base);
+  --dp-white-hover-text: var(--dp-white);
+
+  /* BORDER COLOR */
+  --dp-border-dark: hsl(var(--dp-base-h) var(--dp-base-s) 80%);
+  --dp-border-light: hsl(var(--dp-base-h) var(--dp-base-s) 100% / 0.1);
+
+}
+
+/* You can customize the size and gap from the link below
+https://utopia.fyi/type/calculator?c=320,19,1.2,1100,20,1.25,8,0,&s=0.75|0.5|0.25,1.5|2|3|4|6|8|10|12,s-l&g=s,l,xl,12 */
+
+
+
+
+
+
+/* JUMP TO: GLOBAL CSS
+------------------------------------------------------------------------------------------------------------ */
+
+:root {
+  --dp-section-padding-inline: var(--dp-space-l);
+  --dp-section-padding-block: var(--dp-space-5xl);
+}
+
+/* Maximum Body Width */
+body {
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+/* Focus */
+body.bricks-is-frontend :focus {
+  outline: none;
+}
+body.brx-body.bricks-is-frontend :focus-visible {
+  outline-color: var(--dp-action);
+  outline-style: solid;
+  outline-width: 0.25rem;
+  outline-offset: 0.25rem;
+}
+.focus-visible.body.brx-body.bricks-is-frontend :focus-visible {
+  outline-color: var(--dp-action);
+  outline-style: solid;
+  outline-width: 0.25rem;
+  outline-offset: 0.25rem;
+}
+
+/* Brick Global Styling Over-ride */
+:where(p:last-of-type)+h1,
+:where(p:last-of-type)+h2,
+:where(p:last-of-type)+h3,
+:where(p:last-of-type)+h4,
+:where(p:last-of-type)+h5,
+:where(p:last-of-type)+h6 {
+  margin-top: 0;
+}
+
+
+
+
+
+
+/* JUMP TO: UTILITY CLASSES
+------------------------------------------------------------------------------------------------------------ */
+
+/* Background Colors */
+.dp-bg-dark {
+  background-color: var(--dp-base);
+}
+.dp-bg-shade {
+   background-color: var(--dp-action-shade);
+}
+
+/* Border Bottom */
+.dp-border-bottom {
+   border-bottom: 1px solid var(--dp-border-dark);
+}
+.dp-bg-dark .dp-border-bottom {
+   border-bottom: 1px solid var(--dp-border-light);
+}
+
+/* Gap */
+.dp-container-gap {
+  row-gap: var(--dp-space-2xl);
+}
+.dp-content-gap {
+  row-gap: var(--dp-space-2xl);
+}
+.dp-grid-gap {
+  gap: var(--dp-space-2xl);
+}
+@media (max-width: 478px) {
+  .dp-container-gap {
+    row-gap: var(--dp-space-4xl);
+  }
+  .dp-content-gap {
+    row-gap: var(--dp-space-4xl);
+  }
+  .dp-grid-gap {
+    gap: var(--dp-space-4xl);
+  }
+}
+
+
+
+
+/* JUMP TO: SOCIAL ICONS
+-------------------------------------------------------------------------------------------------------------- */
+:root {
+    --dp-social-icon-color-pri: var(--dp-action);
+    --dp-social-icon-color-pri-text: var(--dp-action-text);
+    --dp-social-icon-color-pri-hover: var(--dp-action-hover);
+    --dp-social-icon-color-pri-hover-text: var(--dp-action-hover-text);
+    --dp-social-icon-border-radius: 50%;
+    --dp-social-icon-height: 3.2rem;
+}
+
+/* Default Styling */
+[class*=dp-social-icon] {
+    height: var(--dp-social-icon-height);
+    padding: calc(var(--dp-social-icon-height) * 0.2);
+}
+.dp-social-icon__group {
+    flex-direction: row;
+    column-gap: var(--dp-space-2xs);
+    padding: 0;
+}
+.dp-social-icon__group a {
+    height: var(--dp-social-icon-height);
+}
+
+
+
+
+
+/* JUMP TO: NAV MENU
+-------------------------------------------------------------------------------------------------------------- */
+
+:root {
+    --dp-header-menu-font-size: 1.6rem;
+    --dp-header-menu-mobile-line-height: 5rem;
+}
+
+
+
+
+
+
+/* JUMP TO: HEADER
+-------------------------------------------------------------------------------------------------------------- */
+
+:root {
+    --dp-header-menu-font-size: 1.6rem;
+    --dp-header-menu-border-padding-block: 2rem;
+    --dp-header-menu-border-padding-inline: 1rem;
+
+    --dp-header-menu-color-pri: var(--dp-action);
+    --dp-header-menu-color-pri-text: var(--dp-action-text);
+    --dp-header-menu-color-text-light: var(--dp-white);
+    --dp-header-menu-color-text-dark: var(--dp-base);
+
+    --dp-header-menu-bg-tall-min-height: 7rem;
+    --dp-header-menu-bg-short-min-height: 6rem;
+    --dp-header-menu-hover-min-height: 6rem;
+
+    --dp-header-menu-bg-tall-padding: 2rem 2rem;
+    --dp-header-menu-bg-short-padding: 1rem 2rem;
+    --dp-header-menu-bg-short-margin: 1rem 0;
+
+    --dp-header-menu-border-padding: 2rem 1rem;
+
+    --dp-header-menu-border-min-height: 12rem;
+    --dp-header-menu-border-width: 5px;
+    --dp-header-menu-border-style: solid;
+    --dp-header-menu-border-color: rgba(0, 0, 0, 0);
+    --dp-header-menu-border: var(--dp-header-menu-border-width) var(--dp-header-menu-border-style) var(--dp-header-menu-border-color);
+
+
+    --dp-header-menu-hover-gap: 0 3rem;
+    --dp-header-menu-text-decoration: var(--dp-footer-nav-text-decoration);
+    --dp-header-menu-text-underline-offset: var(--dp-footer-nav-text-underline-offset);
+    --dp-header-column-gap: 1.5rem;
+}
+
+/* Header CTA Buttons 
+--------------------- */
+[class*=dp-header__row] [class*=bricks-background-primary] {
+    font-size: var(--dp-header-menu-font-size);
+    background-color: var(--dp-action);
+    color: var(--dp-action-text);
+    margin-left: 2rem;
+}
+[class*=dp-header__row] [class*=bricks-background-primary]:hover {
+    background-color: var(--dp-action-hover);
+    color: var(--dp-action-hover-text);  
+}
+
+
+/* Default Header Container Styling 
+----------------------------------- */
+[class*=dp-header-top] {
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+
+
+/* JUMP TO: FOOTERS
+------------------------------------------------------------------------------------------------------------ */
+:root {
+    --dp-footer-nav-color-dark: var(--dp-action);
+    --dp-footer-nav-color-light: var(--dp-white);
+    --dp-footer-nav-color-light-trans: var(--dp-white-trans);
+    --dp-footer-nav-color-active: var(--dp-action);
+    --dp-footer-nav-font-size: var(--dp-font-s);
+    --dp-footer-nav-line-height: 1.2;
+    --dp-footer-nav-text-decoration: underline;
+    --dp-footer-nav-text-underline-offset: 0.4rem;
+    --dp-footer-nav-direction-column-gap: 1.2rem 0;
+    --dp-footer-nav-direction-row-gap: 1rem 2rem;
+    --dp-footer-nav-bottom-font-size: var(--dp-font-xs);
+    --dp-footer-nav-bottom-line-height: 2;
+    --dp-footer-nav-bottom-direction-row-gap: 0 2.4rem;
+    --dp-footer-container-gap: var(--dp-space-2xl);
+    --dp-footer-grid-gap: 6rem 3rem;
+    --dp-footer-item-column-gap: 1.2rem;
+}
+
+/* General Footer Styling */
+.dp-footer {
+    padding-top: var(--dp-space-3xl);
+    padding-bottom: var(--dp-space-3xl);
+    row-gap: var(--dp-footer-container-gap);
+}
+
+/* These styles affect (Nav Title, Copyright, Footer Lede)
+when the background is Dark
+-------------------------------------------------------- */
+.dp-bg-dark .dp-footer__title {
+    color: var(--dp-footer-nav-color-light);
+}
+.dp-bg-dark .dp-footer__text,
+.dp-bg-dark .dp-footer__copyright,
+.dp-bg-dark .dp-footer__lede {
+    color: var(--dp-footer-nav-color-light-trans);
+}
+
+/* What are your Font sizes: for your Footer Title,
+Footer Text, Footer Lede, Footer Copyright Text?
+--------------------------------------------------- */
+.dp-footer__title {
+    font-size: var(--dp-font-body);
+}
+.dp-footer__text {
+    font-size: var(--dp-font-s);
+}
+.dp-footer__lede {
+    font-size: var(--dp-font-body);
+}
+.dp-footer__copyright {
+    font-size: var(--dp-font-s);
+}
+
+/* This code below makes sure the copyright is the last item */
+@media (max-width: 991px) {
+    .dp-footer__copyright {
+        order: 2;
+    }
+}
+
+/* Text Link Hover:
+This affects any "link" within any text-block with the given class ".dp-footer__text".
+-------------------------------------------------------------------------------------- */
+.dp-footer__text a:hover {
+    text-decoration: underline;
+    text-underline-offset: var(--dp-footer-nav-text-underline-offset);
+}
+
+
+
+
+
+/* JUMP TO: CTA BUTTON/LINK
+---------------------------------------------------------------------------------------------------------- */
+:root {
+
+    /* CTA Button - Font */
+    --dp-cta-button-font-size: 1.6rem;
+    --dp-cta-button-font-weight: 700;
+
+    /* CTA Button Transition */
+    --dp-cta-button-transition: all 0.3s ease-in-out;
+
+    /* CTA Button - Icon */
+    --dp-cta-button-icon-height: 2rem;
+
+    /* CTA Button - Decoration */
+    --dp-cta-button-decoration: none;
+
+    /* CTA Button - Border */
+    --dp-cta-button-border-width: 2px;
+    --dp-cta-button-border-style: solid;
+    --dp-cta-button-border-radius: 3em;
+
+    /* CTA Button - Padding */
+    --dp-cta-button-padding-block: 0.3em;
+    --dp-cta-button-padding-inline: 1.2em;
+
+    /* CTA Button - Width */
+    --dp-cta-button-minimum-width: 5em;
+
+    /* CTA Link */
+    --dp-cta-link-font-size: var(--dp-cta-button-font-size);
+    --dp-cta-link-font-weight: var(--dp-cta-button-font-weight);
+    --dp-cta-link-transition: var(--dp-cta-button-transition);
+
+    --dp-cta-link-underline-offset: .2rem;
+    --dp-cta-link-decoration: underline;
+    --dp-cta-link-decoration-hover: none;
+
+    /* Button Group */
+    --dp-cta-group-column-gap: 0.75em;
+    --dp-cta-group-row-gap: 0.5em;
+}
+
+
+
+
+
+/* JUMP TO: BUTTONS
+--------------------------------------------------------------------------------------------------------- */
+:root {
+    --dp-btn-color-pri: var(--dp-action);
+    --dp-btn-color-pri-text: var(--dp-action-text);
+    --dp-btn-color-pri-light: transparent; /* Can be White/Transparent */
+    --dp-btn-color-box-shadow: var(--dp-action-hover);
+    --dp-btn-padding-inline: 3rem; /* Padding Left/Right */
+    --dp-btn-padding-block: 1rem; /* Padding Up/Down */
+    --dp-btn-padding: var(--dp-btn-padding-block) var(--dp-btn-padding-inline);
+    --dp-btn-border-radius: 0; /* Make this "0" if you don't want it to be round */
+    --dp-btn-min-width: 15rem;
+    --dp-font-size: 1.6rem;
+}
+
+[class*=dp-btn] {
+    font-size: var(--dp-font-size);
+    font-weight: 700;
+}
+
+
+
+
+
+/* JUMP TO: LOGO
+----------------------------------------------------------------------------------------------------------- */
+:root {
+    --dp-logo-color-dark: var(--dp-base);
+    --dp-logo-color-light: var(--dp-white);
+}
+
+/* Default Styling, Dark */
+.dp-logo-header, 
+.dp-logo-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    fill: var(--dp-logo-color-dark) !important;
+    height: 3rem;
+    width: auto;
+}
+
+/* Default Styling, Light */
+.dp-bg-dark .dp-logo-header,
+.dp-bg-dark .dp-logo-footer {
+    fill: var(--dp-logo-color-light) !important;
+}
+
+@media (max-width: 991px) {
+    .dp-logo-header {
+        height: 3rem;
+        width: auto;
+    }
+}
+
+
+
+
+
+/* JUMP TO: SEARCH
+------------------------------------------------------------------------------------------------------------ */
+:root {
+  --dp-search-input-color-pri: var(--dp-action);
+  --dp-search-input-color-pri-text: var(--dp-action-text);
+  --dp-search-input-color-pri-hover: var(--dp-action-hover);
+  --dp-search-input-color-pri-hover-text: var(--dp-action-hover-text);
+  --dp-search-input-color-light: var(--dp-white);
+  --dp-search-input-color-dark: var(--dp-base);
+  --dp-search-input-color-placholder-light: hsl(0, 0%, 65%);
+  --dp-search-input-color-placholder-dark: hsl(0, 0%, 45%);
+  --dp-search-input-color-input-light: hsl(0, 0%, 100%);
+  --dp-search-input-color-input-dark: hsl(0, 0%, 12%);
+  --dp-search-input-btn-width: 4rem;
+  --dp-search-input-icon-height: 1rem;
+  --dp-search-input-border-radius: 6rem;
+  --dp-search-input-padding-right: 0 calc(var(--dp-search-input-btn-width) + 1rem) 0 2rem;
+  --dp-search-input-padding-left: 0 2rem 0 calc(var(--dp-search-input-btn-width) + 1rem);
+}
+
+/* All Search Inputs Styling */
+[class*=dp-search-input],
+[class*=dp-search-input] input[type="search"] {
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+/* Search Input, Dark */
+[class*=dp-search-input] input[type="search"]::placeholder {
+  color: var(--dp-search-input-color-placholder-dark);
+}
+[class*=dp-search-input] input[type="search"] {
+  color: var(--dp-search-input-color-input-dark);
+}
+
+/* Search Input, Light */
+.dp-bg-dark input[type="search"]::placeholder {
+  color: var(--dp-search-input-color-placholder-light);
+}
+.dp-bg-dark input[type="search"] {
+  color: var(--dp-search-input-color-input-light);
+}
+
+/* Search Input, Round */
+.dp-round .bricks-search-form input[type="search"] {
+  border-radius: var(--dp-search-input-border-radius);
+}
+
+
+
+
+
+/* JUMP TO: NEWSLETTER
+------------------------------------------------------------------------------------------------------- */
+:root {
+    --dp-newsletter-field-padding: 0.4rem 5rem 0.4rem 1.6rem;
+    --dp-newsletter-field-border-radius: 5rem;
+    --dp-newsletter-field-border-dark: none;
+    --dp-newsletter-field-border-light: none;
+    --dp-newsletter-field-font-size: var(--dp-font-s);
+    --dp-newsletter-field-bg-dark: hsl(0, 0%, 80%, 0.5);
+    --dp-newsletter-field-bg-dark-text: hsl(0, 0%, 20%);
+    --dp-newsletter-field-bg-dark-active: hsl(0, 0%, 85%);
+    --dp-newsletter-field-bg-light: hsl(0, 0%, 80%, 0.1);
+    --dp-newsletter-field-bg-light-text: hsl(0, 0%, 80%);
+    --dp-newsletter-field-bg-light-active: hsl(0, 0%, 80%, 0.5);
+
+    --dp-newsletter-placeholder-dark: hsl(0, 0%, 50%);
+    --dp-newsletter-placeholder-light: hsl(0, 0%, 80%);
+
+    --dp-newsletter-label-font-size: var(--dp-font-s);
+    --dp-newsletter-label-color-dark: inherit;
+    --dp-newsletter-label-color-light: var(--dp-white-trans);
+    --dp-newsletter-label-margin: 0 0 0.5rem 0;
+
+    --dp-newsletter-btn-font-size: var(--dp-font-s);
+    --dp-newsletter-btn-padding: 1rem 3rem;
+    --dp-newsletter-btn-width: 15rem;
+    --dp-newsletter-btn-width-mobile: 100%;
+    --dp-newsletter-btn-border-radius: 5rem;
+    --dp-newsletter-btn-bg-dark: var(--dp-action);
+    --dp-newsletter-btn-bg-dark-text: var(--dp-action-text);
+    --dp-newsletter-btn-bg-dark-hover: var(--dp-action-hover);
+    --dp-newsletter-btn-bg-dark-hover-text: var(--dp-action-hover-text);
+    --dp-newsletter-btn-bg-light: var(--dp-action);
+    --dp-newsletter-btn-bg-light-text: var(--dp-action-text);
+    --dp-newsletter-btn-bg-light-hover: var(--dp-action-hover);
+    --dp-newsletter-btn-bg-light-hover-text: var(--dp-action-hover-text);
+
+    --dp-newsletter-row-gap: 2rem;
+}
+
+/* Success Message */
+.mc4wp-alert.mc4wp-success {
+    font-size: var(--dp-newsletter-label-font-size);
+    margin-top: 0.5rem;
+}
+.dp-bg-dark .mc4wp-alert.mc4wp-success {
+    color: var(--dp-newsletter-label-color-light);
+}
+
+/* Default Styling, Dark */
+[class*=dp-newsletter] .dp-newsletter__label {
+    font-size: var(--dp-newsletter-label-font-size);
+    color: var(--dp-newsletter-label-color-dark);
+    margin: var(--dp-newsletter-label-margin);
+}
+[class*=dp-newsletter] .mc4wp-form-fields input[type="email"] {
+    border: var(--dp-newsletter-field-border-dark);
+    background-color: var(--dp-newsletter-field-bg-dark);
+    color: var(--dp-newsletter-field-bg-dark-text);
+    outline-color: var(--dp-newsletter-field-bg-dark);
+    width: 100%;
+    padding: var(--dp-newsletter-field-padding);
+    border-radius: var(--dp-newsletter-field-border-radius);
+    font-size: var(--dp-newsletter-field-font-size);
+}
+[class*=dp-newsletter] .mc4wp-form-fields input[type="email"]::placeholder {
+    color: var(--dp-newsletter-placeholder-dark);
+}
+[class*=dp-newsletter] .mc4wp-form-fields input[type="submit"]:hover {
+    background-color: var(--dp-newsletter-btn-bg-dark-hover);
+    color: var(--dp-newsletter-btn-bg-dark-hover-text);
+}
+
+/* Default Styling, Light */
+.dp-bg-dark [class*=dp-newsletter] .dp-newsletter__label {
+    color: var(--dp-newsletter-label-color-light);
+}
+.dp-bg-dark [class*=dp-newsletter] .mc4wp-form-fields input[type="email"] {
+    background-color: var(--dp-newsletter-field-bg-light);
+    color: var(--dp-newsletter-field-bg-light-text);
+    outline-color: var(--dp-newsletter-field-bg-light);
+    border: var(--dp-newsletter-field-border-light);
+}
+.dp-bg-dark
+    .dp-newsletter
+    .mc4wp-form-fields
+    input[type="email"]::placeholder {
+    color: var(--dp-newsletter-placeholder-light);
+}
+.dp-bg-dark [class*=dp-newsletter] .mc4wp-form-fields input[type="submit"] {
+    background-color: var(--dp-newsletter-btn-bg-light);
+    color: var(--dp-newsletter-btn-bg-light-text);
+}
+.dp-bg-dark
+    .dp-newsletter
+    .mc4wp-form-fields
+    input[type="submit"]:hover {
+    background-color: var(--dp-newsletter-btn-bg-light-hover);
+    color: var(--dp-newsletter-btn-bg-light-hover-text);
+}
+
+
+
+
+
+/* JUMP TO: HEADING
+-------------------------------------------------------------------------------------------------------------*/
+
+:root {
+
+  /* Heading - Border */
+  --dp-heading-border-width: 4rem;
+  --dp-heading-border-height: 0.4rem;
+  --dp-heading-border-column-gap: 0.8rem;
+  --dp-heading-border-row-gap: 0.4rem;
+  --dp-heading-border-bg-color: currentcolor;
+
+  /* Accent - Border */
+  --dp-accent-border-padding: 0.1em 1em;
+  --dp-accent-border-border-radius: 5em;
+
+  /* Heading - Double Column */
+  --dp-heading-column-double-left-width: 40%;
+  --dp-heading-column-double-gap-column: 4rem;
+  --dp-heading-column-double-gap-row: 2rem;
+
+  /* Heading - Single Column */
+  --dp-heading-column-single-width-desktop: 60%;
+  --dp-heading-column-single-width-tablet-portrait: 75%;
+
+  /* Section Negative Margin */
+  --dp-section-negative-margin: calc((var(--dp-section-padding-block) + 6rem) * -1);
+
+}
+
+/* Global Accent Heading Styling */
+[class*=dp-accent] {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  order: -1;
+}
